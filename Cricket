@@ -1,0 +1,23 @@
+#include <stdio.h>
+int main() {
+
+   int tb, tr, rs, bb, x, y, z;
+    scanf("%d %d %d %d", &tb, &tr, &rs, &bb);
+    z = tb/6; // total overs
+    x = bb/6; // currently completed overs
+    y = bb%6; // balls played in the current over
+  
+    float z3 = x + y * 0.1; // overs in decimal as in cricker eg 7.5(7 overs and 5 balls done) next is 8.0 every 6 balls = 1 over
+    float z4 = rs/z3; //runrate of csk
+    float ans = (float)tr/z; // MI runrate
+  
+    printf("%d\n",z);
+    printf("%.1f\n",z3);
+    printf("%.1f\n",z4);
+    printf("%.1f\n",ans);
+    if(z4 > ans)
+        printf("Eligible to Win");
+    else
+        printf("Not Eligible to Win");
+    return 0;
+}
