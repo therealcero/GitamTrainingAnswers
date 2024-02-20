@@ -1,0 +1,28 @@
+#include <iostream>
+using namespace std;
+
+int main() 
+{
+  int n, even = 0, odd = 0;
+  scanf("%d", &n);
+  int a[n];
+  
+  for(int i = 0; i<n; i++) //reading the array
+  	scanf("%d",&a[i]);
+  for(int i = 0; i<n; i++)
+  {
+    if(a[i]%2 == 0) //  checking if even or odd
+    {
+      even += a[i]; // adding even
+    }
+    else
+    {
+      odd += a[i]; // adding odd
+    }
+  }
+  
+  	printf("The sum of the even numbers in the array is %d\n",even);
+	printf("The sum of the odd numbers in the array is %d",odd);
+  
+  return 0;
+}
