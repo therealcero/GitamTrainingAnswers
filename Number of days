@@ -1,0 +1,21 @@
+#include <stdio.h>
+int main() {
+
+    int y,m;
+    scanf("%d %d",&y,&m);
+    
+    if(m == 2)//checking for leap year
+    {
+        if( (y%4 == 0 && y%100 != 0) || y%400 == 0)
+            printf("29 Days");
+        else
+            printf("28 Days");
+    }
+    else if(m == 4||m == 6||m == 9||m == 11) // checking for 30 day months
+        printf("30 Days");
+    else
+        printf("31 Days"); // remaining are 31 day months
+    
+    
+    return 0;
+}
