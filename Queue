@@ -1,0 +1,23 @@
+#include <stdio.h>
+int main()
+{
+  int n, m, count = 1, busCapacity = 0; // count is 1 because at least one bus has to come
+  scanf("%d %d", &n, &m);
+  int a[n]; // making array
+  for(int i = 0; i < n; i++) //reading array
+  {
+    scanf("%d", &a[i]);
+  }
+  busCapacity = m; // setting the current bus capacity
+  for(int i = 0; i<n; i++)
+  {
+    if(busCapacity < a[i]) // checking if bus can fit the entier group or not that is busCapasity is greater than the no of ppl in grp
+    {
+      count++; // incrementing as the previous bus leaves and new bus comes because the previous bus couldnt fit all of the grp
+      busCapacity = m; // new bus so full capacity
+    }
+    busCapacity -= a[i]; //ppl get into bus so removing the capacity
+  }
+  printf("%d", count);
+  return 0;
+}
