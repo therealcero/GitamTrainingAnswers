@@ -1,0 +1,25 @@
+#include <stdio.h>
+int main()
+{
+  int c = 0;
+  int n = 18;
+  scanf("%d",&n);
+  printf("%d\n",n);
+  while(n!=1)
+  {
+    if(n%2==0)
+    {
+      n/=2;
+    }
+    else
+    {
+      n = 3*n+1;
+    }
+    printf("%d\n",n);
+    c++;
+  }
+  printf("%d",c);
+  return 0;
+}
+
+// just follow the formula in loop till u reach 1
