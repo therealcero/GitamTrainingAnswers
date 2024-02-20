@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+int main() {
+
+    int age, yop, fi, sa;
+    float st, ap;
+    scanf("%d %d %d %d %f %f",&age ,&yop ,&fi ,&sa ,&st ,&ap);
+    if((yop >= 2021) && (age >= 18 && age < 21) && (st >= 60) && (ap >= 80))
+    {
+        if(sa <= 2 && fi <= 200000)
+            printf("Eligible");
+        else if((fi >= 200000 &&  fi < 250000) && (st >= 80) && (ap >= 90))
+            printf("Partially Eligible");
+        else
+            printf("Not Eligible");
+    }
+    else
+        printf("Not Eligible");
+    return 0;
+}
