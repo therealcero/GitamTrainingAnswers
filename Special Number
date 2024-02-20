@@ -1,0 +1,20 @@
+#include <iostream>
+using namespace std;
+
+void fun(int n)
+{
+    int a = n%10; // last digit
+    int b = n/10; // first digit
+    int ans = (a*b)+(a+b); // adding sum and product of a and b
+    if(ans == n)
+        printf("%d\n",n);
+}
+
+int main() {
+
+        int s,e;
+    scanf("%d%d",&s,&e);
+    for(int i=s;i<=e;i++)
+        fun(i);
+    return 0;
+}
