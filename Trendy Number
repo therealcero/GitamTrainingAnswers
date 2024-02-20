@@ -1,0 +1,18 @@
+#include <stdio.h>
+int main() {
+    int n;
+    scanf("%d", &n);
+    int c = floor(log10(n)) + 1; // to find the no of digits
+    int mid = (n % 100) / 10; // get the middle number
+    if(c == 3)
+    {
+        if(mid % 3 == 0) // checking if divisible by 3
+        printf("Trendy Number");
+    else
+        printf("Not a Trendy Number");
+    }
+    else
+        printf("Invalid Number");
+    
+    return 0;
+}
