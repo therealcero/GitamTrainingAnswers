@@ -1,0 +1,63 @@
+
+Description
+
+Write a program to find the sum of the positive odd numbers present in an array using recursion.
+
+
+
+Input Format
+
+The first integer input represents the size of the array (n), next n lines consist of values present in the array.
+
+
+
+Output Format
+
+The output prints the sum of positive odd numbers in an array. Refer to the sample output for formatting specifications.
+
+
+
+Sample Input 1
+
+3
+
+1
+
+1
+
+1
+
+
+
+Sample Output 1
+
+Sum = 3
+
+==========================================================================================================
+
+#include <stdio.h>
+
+int sum(int a[], int n,int s)
+{
+      int x = 0;
+     n--;
+     if(n<0)
+     return s;
+      if(a[n]%2 != 0)
+    {
+        x = a[n];
+    }
+  return  sum(a,n,s+x);
+    
+}
+
+int main()
+{
+  int n;
+  scanf("%d", &n);
+  int a[n];
+  for(int i = 0; i<n; i++)
+      scanf("%d",&a[i]);
+  printf("Sum = %d",sum(a,n,0));
+   return 0;
+}
