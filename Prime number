@@ -1,0 +1,27 @@
+Description
+
+Write a program to find whether the given number is a prime number or not using recursion.
+
+
+
+Input Format
+
+The Input consists of an integer.
+
+
+
+Output Format
+
+Prints Prime Number or Not a Prime number.
+
+
+
+Sample Input 1
+
+13
+
+
+
+Sample Output 1
+
+Prime Number
